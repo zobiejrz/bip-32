@@ -1,6 +1,6 @@
 # bip-32
 
-## Overviewe
+## Overview
 
 This repository includes implementations of Heirarchical Deterministic Wallets (as specified in [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)) in both Rust and Python. Python was the initial (and much less organized) version of the project. After I felt like I understood the mechanics behind HD Wallets, I redid it in Rust to learn the language.
 
@@ -93,12 +93,12 @@ wallet.get("m/0'/1")
 
 #### Example Paths
 
-|    HD Path    | Key described |
-| :-----------: | :------------ |
-|     `m/0`     | First child private key from the master key |
-|    `m/0/0`    | The first grandchild private key from the first child |
-|    `m/0'/0`   | The first normal grandchild from the first *hardened* child (`m/0'`) |
-|    `m/1/0`    | The first grandchild private key from the second child (`m/1`) |
+|     HD Path     | Key described                                                                                                                       |
+| :-------------: | :---------------------------------------------------------------------------------------------------------------------------------- |
+|     `m/0`     | First child private key from the master key                                                                                         |
+|    `m/0/0`    | The first grandchild private key from the first child                                                                               |
+|   `m/0'/0`   | The first normal grandchild from the first*hardened* child (`m/0'`)                                                             |
+|    `m/1/0`    | The first grandchild private key from the second child (`m/1`)                                                                    |
 | `M/23/17/0/0` | The first great-great grandchild public key from the first great-grandchild from the 18th grandchild from the 24th child (`M/23`) |
 
 > As found in Mastering Bitcoin: Programming the Open Blockchain by Andreas M. Antonopoulos, Chapter 5
